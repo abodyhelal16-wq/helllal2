@@ -1,9 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+/* BODY */
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f4f4f4;
 }
 
+/* HEADER */
 header {
     background-color: #0077b6;
     color: white;
@@ -11,26 +17,43 @@ header {
     padding: 15px;
 }
 
+/* NAVBAR */
 nav {
     background-color: #023e8a;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     padding: 12px 20px;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 nav a:hover {
     background-color: #0096c7;
 }
 
+/* MAIN */
 main {
     padding: 20px;
+    min-height: 75vh;
 }
 
+/* SECTION */
+section {
+    max-width: 800px;
+    margin: auto;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -52,12 +75,19 @@ table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
+/* HOVER TABLE 🔥 */
+table tr:hover {
+    background-color: #d0f0ff;
+}
+
+/* FORM */
 form {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     max-width: 400px;
     margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 input, textarea {
@@ -72,12 +102,14 @@ button {
     padding: 10px;
     border: none;
     cursor: pointer;
+    width: 100%;
 }
 
 button:hover {
     background-color: #0096c7;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     background-color: #0077b6;
@@ -86,12 +118,39 @@ footer {
     margin-top: 20px;
 }
 
+/* ===================== */
+/* 📱 RESPONSIVE DESIGN */
+/* ===================== */
+
 @media (max-width: 600px) {
+
+    /* NAVBAR */
     nav {
         flex-direction: column;
         text-align: center;
     }
-}
-table tr:hover {
-    background-color: #d0f0ff;
+
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+
+    /* TABLE */
+    table {
+        font-size: 12px;
+    }
+
+    /* FORM */
+    form {
+        width: 100%;
+    }
+
+    /* TEXT */
+    header h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
 }
